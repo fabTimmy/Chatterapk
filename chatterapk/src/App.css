@@ -19,6 +19,21 @@ html{
   color: var(--Light-Red-error);
   font-weight: bold;
 }
+/* navbar */
+.navBarSection{
+  position: fixed;
+  bottom: 0px;
+  background-color: #077ef5;
+  height: 4rem;
+  width: 100%;
+}
+.right{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
 /* signin */
 section{
   display: flex;
@@ -135,7 +150,108 @@ form p{
 .rem{
   width: 7rem;
 }
+/* home-section */
+.home{
+  text-decoration: none;
+  color: #fff;
+  font-weight: 400;
+  text-align: center;
+  line-height: 1.5rem;
+  font-size: 1rem;
+  margin-top: 1rem;
+  padding: 2rem 0;
+  height: 100vh;
+}
+.p{
+  text-align: center !important;
+}
+.aside{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.aside img{
+  width: 20rem;
+  height: 20rem;
+}
+/* settings */
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  color: #fff;
+  background-color: #ccc;
+  height: 8rem;
+}
+.edit{
+  background-color: #fff;
+  color: #000;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+.edit:hover{
+  background-color: #000;
+  transition: 1s ease all;
+  color: #fff;
+}
+.settings-cont-1{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+.settings-cont-1 img{
+  position: absolute;
+  top: -2rem;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  background-color: #000;
+  border: 2px solid #fff;
+}
+.dropdown{
+  margin-top: 5rem;
+  pointer-events: none;
+  transition: 1s ease all;
+}
 @media (min-width: 820px ) {
+  /* navbar */
+  .navBarSection{
+    position: fixed;
+    top: 0;
+    left: 0 !important;
+    width: 100%;
+  }
+  .right{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+  }
+  /* Home */
+  .home{
+    padding: 0;
+    height: 100vh;
+  }
+  .aside{
+    width: 50%;
+  }
+  .aside img{
+    width: 30rem;
+    height: 30rem;
+  }
+  .p{
+    width: 50%;
+  }
   .sign-in-cont{
     width: 28rem;
   }

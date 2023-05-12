@@ -1,12 +1,13 @@
-import { useState } from 'react'
-import Form from './Form'
+import SignIn from './Auth/SignIn'
 
 const Home = () => {
-  const [textHandler, setTextHandler] = useState('')
-  const [todos, setTodos] = useState('')
   return (
     <div className='home'>
-          <Form todos={todos} setTodos={setTodos} setTextHandler={setTextHandler} textHandler={textHandler}/>
+          <div className="aside">
+            <img src="./Images/icons8-chat-64.png" alt="icon"  />
+            <h1>BillieChats</h1>
+          </div>
+          <SignIn/>
     </div>
 
     

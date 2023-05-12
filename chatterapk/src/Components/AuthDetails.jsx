@@ -22,7 +22,7 @@ const AuthDetails = () => {
     signOut(auth)
       .then(() => {
         console.log("Sign Out successful");
-        navigate('/signin')
+        navigate('/logged-out')
       })
       .catch((error) => {
         console.log(error);
