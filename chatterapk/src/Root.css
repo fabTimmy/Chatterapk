@@ -4,16 +4,26 @@
     --Dark-Blue-main-bg: hsl(218, 28%, 13%);
     --Dark-Blue-footer-bg: hsl(216, 53%, 9%);
     --Dark-Blue-testimonial-bg: hsl(219, 30%, 18%);
+    --Bg-total: #0d2944;
+    --Linear-bg: linear-gradient( to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
     /* accent */
     --Cyan: hsl(176, 68%, 64%);
     --Blue: hsl(198, 60%, 50%);
     --Light-Red-error: hsl(0, 100%, 63%);
     /* neutral */
     --White: hsl(0, 0%, 100%);
+    --Black: #000;
     /* socials */
+    --Fb-bg: #077ef5;
     /* font family */
     --font-family-headings: 'Raleway', sans-serif;
     --font-family-body: 'Open Sans', sans-serif;
+    /* supplements */
+    --Dark-bg: #0B0C10;
+    --Dark-gray: #1f2833;
+    --Light-brown: #c5c6c7;
+    --Light-blue: #66fcf1;
+    --Dark-cyan: #45a29e;
   }
   @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
   @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');

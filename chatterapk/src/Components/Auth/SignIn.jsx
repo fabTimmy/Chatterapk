@@ -1,10 +1,10 @@
 import { useState } from "react";
-import { auth } from "../../Firebase";
+import { auth, provider } from "../../Firebase";
 import { signInWithEmailAndPassword, sendPasswordResetEmail } from "firebase/auth";
 import { NavLink, useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
 import { AiFillFacebook } from "react-icons/ai";
-import { GoogleAuthProvider, signInWithPopup, FacebookAuthProvider } from "firebase/auth";
+import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 
 const SignIn = () => {
   const [email, setEmail] = useState("");
@@ -36,10 +36,9 @@ const SignIn = () => {
     }
   }
   // sign in with facebook
-  const fbProvider = new FacebookAuthProvider();
   const FacebookLogin = async () => {
     try {
-      const result = await signInWithPopup(auth, fbProvider)
+      const result = await signInWithPopup(auth, provider)
       console.log(result)
       navigate('/dashboard')
     } catch (error) {
