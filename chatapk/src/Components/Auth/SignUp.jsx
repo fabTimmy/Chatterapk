@@ -4,16 +4,20 @@ import { createUserWithEmailAndPassword } from "firebase/auth";
 import { FcGoogle } from "react-icons/fc";
 import { AiFillFacebook } from "react-icons/ai";
 import { NavLink } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const SignUp = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const signIn = (e) => {
+  const navigate = useNavigate();
+
+  const handleSubmit = (e) => {
     e.preventDefault();
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         console.log(userCredential);
+        navigate('/signin')
       })
       .catch((error) => {
         console.log(error);
@@ -22,7 +26,7 @@ const SignUp = () => {
   return (
     <section>
       <div className="sign-in-cont">
-        <form onSubmit={signIn}>
+        <form onSubmit={handleSubmit}>
           <h1>Create an account</h1>
           <input
             type="email"
@@ -43,10 +47,11 @@ const SignUp = () => {
             onChange={(e) => setPassword(e.target.value)}
           />
           <br />
-          <p>
-            <input type="checkbox" className="checkbox" />{" "}
-            <h6 className="check"> remember me</h6>
-          </p>
+          <div className="remember-cont">
+        <p>
+          <input type="checkbox" className="checkbox" /> <p className="rem">Remember me</p>
+        </p>
+        </div>
           <button type="submit" className="btn">
             Sign up
           </button>
@@ -54,7 +59,7 @@ const SignUp = () => {
         </form>
         <div className="socials">
           <button>
-            <FcGoogle className="google"/>
+            <FcGoogle className="nav-icon"/>
             Sign up with Google
           </button>
           <button>
